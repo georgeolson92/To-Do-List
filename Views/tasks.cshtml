@@ -1,0 +1,11 @@
+<h1>To Do List</h1>
+<ul>
+  @foreach (var task in Model)
+  {
+    <li><a href='/tasks/@task.GetId()'>@task.GetDescription()</a></li>
+  }
+</ul>
+<a href='/tasks/new'>Add new task</a>
+<form action="/clear" method="post">
+  <button type="submit" name="button">CLEAR ALL</button>
+</form>
